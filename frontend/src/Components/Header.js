@@ -5,7 +5,7 @@ export default class Header extends Component {
     render() {
       return (
         <div className="header">
-          <span className="logo">fakkit</span>
+          <span className="logo">MovieCenter</span>
         </div>
       )
     }
