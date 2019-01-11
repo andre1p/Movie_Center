@@ -10,11 +10,14 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Header />
+        <Header />
+        <div className="contenedor">
+          
           <Route path="/" exact
             component={MovieList} />
           <Route path="/minfo"
             component={MovieInfo} />
+        </div>
         </div>
       </Router>
 
