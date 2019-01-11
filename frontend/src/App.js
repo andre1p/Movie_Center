@@ -4,6 +4,7 @@ import './App.css';
 import Header from './Components/Header';
 import MovieList from './Components/MovieList';
 import MovieInfo from './Components/MovieInfo';
+import Home from './Components/Home';
 
 class App extends Component {
   render() {
@@ -12,8 +13,9 @@ class App extends Component {
         <div>
         <Header />
         <div className="contenedor">
-          
           <Route path="/" exact
+            component={Home} />
+          <Route path="/mlist" exact
             component={MovieList} />
           <Route path="/minfo"
             component={MovieInfo} />
