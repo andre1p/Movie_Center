@@ -13,23 +13,31 @@ export default class MovieInfo extends Component {
     }
 
     dbExtract = () => {
+     
+    }
+
+    render() {
+        let { film } = this.state;
+        console.log(film);
         axios.get("https://api.themoviedb.org/3/movie/5?api_key=a7a70930a3a525de17aae6719fbd0d68&language=en-US")
         .then(response => {
             this.setState({
                 film: response.data,
             })
         });
-    }
-
-    render() {
-       
-       
-        let { film } = this.state;
+        let imglink = ["https://image.tmdb.org/t/p/w500"+film.poster_path];
+        //imglink.push(film.poster_path);
         return (
             <div>
-                {film.map((original_title) =>
-                  <p>{original_title}</p> 
-                )}
+            <img src={imglink} alt="Smiley face" height="auto" width="auto"></img>
+            <h2>{film.original_title}</h2>
+            <h3>{film.tagline}</h3>
+            <ul>
+                <li></li>
+            </ul>
+            <p>Original Language: {film.original_language}</p>
+            <p>{film.overview}</p>
+           
             </div>
         )
     }

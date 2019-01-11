@@ -13,7 +13,7 @@ export default class MovieList extends Component {
   render() {
     return (
       <div className="movieList">
-        MovieList
+        <p>MovieList</p>
       </div>
     )
   }
