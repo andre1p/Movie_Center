@@ -6,11 +6,11 @@ export default class Header extends Component {
     return (
       <div className="header">
         <span className="logo">
-        <Link to="/" className="logo">MovieCenter</Link>
+          <Link to="/" className="logo">MovieCenter</Link>
         </span>
         <form action="/mlist">
-          <input type="text" name="text" placeholder="Search your film"/>
-          <input type="submit" />
+          <input type="text" name="text" placeholder="Search your film" />
+          <input type="submit" className="myButton" value="Buscar"/>
         </form>
 
       </div>

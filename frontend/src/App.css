@@ -1,18 +1,12 @@
-.App {
-  text-align: center;
-  background-color: #1F2229;
- 
-}
 
-.contenedor{
-  padding-left: 10%;
-  padding-right: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+body {
+  height: 100%;
   background-color: #1F2229;
-  min-height: 1080px;
+}
+.contenedor{
+  margin-top:75px;
+  background-color: #1F2229;
+  min-height: 720px;
   color: white;
 }
 

@@ -5,3 +5,37 @@
     margin: .5em;
     cursor: pointer;
 }
+
+.movieList{
+   text-align: center;
+    margin: auto;
+    max-width: 70%;
+    margin-bottom: 75px;
+}
+
+.lista{
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.films{
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.links{
+color: white;
+text-decoration: none;
+font-family: 'Francois One', sans-serif;
+font-weight: 700; 
+font-size: 14px;
+
+}
+
+p{
+    margin-top:5px;
+}

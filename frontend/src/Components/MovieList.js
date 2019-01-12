@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './MovieList.css';
 
 export default class MovieList extends Component {
-  
+
   constructor() {
     super();
     this.state = {
@@ -33,7 +33,7 @@ export default class MovieList extends Component {
     this.componentDidMount();
   }
   prevPage = () => {
-    if (this.state.actual_page > 1 ) {
+    if (this.state.actual_page > 1) {
       this.setState({
         actual_page: this.state.actual_page - 1
       })
@@ -53,22 +53,26 @@ export default class MovieList extends Component {
 
     let { movies } = this.state;
     let imglink = ["https://image.tmdb.org/t/p/original"];
+    let movielink = ["http://localhost:3001/minfo"];
 
     this.componentDidMount();
     return (
       this.state.loading ?
         <p>Loading..</p> :
+        
         <div className="movieList">
           <p>MovieList</p>
           <p>There are {this.state.pages} pages</p>
 
-          <div>
+          <div class="lista">
             {movies.map(movie =>
-            <div>
-              <img src={imglink+movie.poster_path} alt="Smiley face" height="auto" width="100"/>
-              <li key={movie.id}>{movie.original_title}</li>
+              <div className="films">
+                
+                <img className="images" src={imglink + movie.poster_path} alt="Film Image" height="auto" width="100" />
+               <p> <a key={movie.id} className="links"  href={movielink + "?movie=" + movie.id}>{movie.original_title}</a> </p>
+                
               </div>
-              )}
+            )}
           </div>
 
           <div>
@@ -77,6 +81,7 @@ export default class MovieList extends Component {
             <button onClick={this.nextPage}>Siguiente</button>
           </div>
         </div>
+        
     )
   }
 }

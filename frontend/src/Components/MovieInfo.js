@@ -13,29 +13,33 @@ export default class MovieInfo extends Component {
     }
 
     render() {
+
+        const queryString = require('query-string');
+        var parsed = queryString.parse(this.props.location.search);
+
         let { film } = this.state;
-        console.log(film);
-        axios.get("https://api.themoviedb.org/3/movie/5?api_key=a7a70930a3a525de17aae6719fbd0d68&language=en-US")
-        .then(response => {
-            this.setState({
-                film: response.data,
-              
-            })
-        });
-        let imglink = ["https://image.tmdb.org/t/p/w500"+film.poster_path];
-        //imglink.push(film.poster_path);
+
+        axios.get(`https://api.themoviedb.org/3/movie/${parsed.movie}?api_key=a7a70930a3a525de17aae6719fbd0d68&language=en-US`)
+            .then(response => {
+                this.setState({
+                    film: response.data,
+
+                })
+            });
+        let imglink = ["https://image.tmdb.org/t/p/w500" + film.poster_path];
+
         return (
-            <div>
-            <img src={imglink} alt="Smiley face" height="500" width="auto"></img>
-            <h2>{film.original_title}</h2>
-            <h3>{film.tagline}</h3>
-            <p>Original language: {film.original_language}</p>
-            <p>Release date: {film.release_date}</p>
-            <div>
-           
-            </div>
-            <p>{film.overview}</p>
-           
+            <div className="container">
+                <img src={imglink} alt="Smiley face" height="500" width="auto"></img>
+                <h2>{film.original_title}</h2>
+                <h3>{film.tagline}</h3>
+                <p>Original language: {film.original_language}</p>
+                <p>Release date: {film.release_date}</p>
+                <div>
+
+                </div>
+                <p>{film.overview}</p>
+
             </div>
         )
     }
