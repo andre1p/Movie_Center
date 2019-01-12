@@ -12,10 +12,6 @@ export default class MovieInfo extends Component {
         }
     }
 
-    dbExtract = () => {
-     
-    }
-
     render() {
         let { film } = this.state;
         console.log(film);
@@ -23,6 +19,7 @@ export default class MovieInfo extends Component {
         .then(response => {
             this.setState({
                 film: response.data,
+              
             })
         });
         let imglink = ["https://image.tmdb.org/t/p/w500"+film.poster_path];
@@ -32,10 +29,11 @@ export default class MovieInfo extends Component {
             <img src={imglink} alt="Smiley face" height="500" width="auto"></img>
             <h2>{film.original_title}</h2>
             <h3>{film.tagline}</h3>
-            <ul>
-                <li></li>
-            </ul>
-            <p>Original Language: {film.original_language}</p>
+            <p>Original language: {film.original_language}</p>
+            <p>Release date: {film.release_date}</p>
+            <div>
+           
+            </div>
             <p>{film.overview}</p>
            
             </div>
