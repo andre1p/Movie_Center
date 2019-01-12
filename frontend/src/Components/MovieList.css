@@ -1,0 +1,7 @@
+.bpage{
+    width: 4em;
+    border: 1px solid white;
+    border-radius: 1em;
+    margin: .5em;
+    cursor: pointer;
+}
