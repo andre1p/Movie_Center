@@ -29,7 +29,7 @@ export default class MovieInfo extends Component {
         //imglink.push(film.poster_path);
         return (
             <div>
-            <img src={imglink} alt="Smiley face" height="auto" width="auto"></img>
+            <img src={imglink} alt="Smiley face" height="500" width="auto"></img>
             <h2>{film.original_title}</h2>
             <h3>{film.tagline}</h3>
             <ul>
