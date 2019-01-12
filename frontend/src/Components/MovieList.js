@@ -65,7 +65,7 @@ export default class MovieList extends Component {
           <div>
             {movies.map(movie =>
             <div>
-              <img key={movie.id} src={imglink+movie.poster_path} alt="Smiley face" height="500" width="auto"/>
+              <img src={imglink+movie.poster_path} alt="Smiley face" height="auto" width="100"/>
               <li key={movie.id}>{movie.original_title}</li>
               </div>
               )}
