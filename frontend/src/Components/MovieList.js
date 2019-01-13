@@ -35,9 +35,9 @@ export default class MovieList extends Component {
   }
   nextPage = () => {
     if (this.state.actual_page < this.state.pages)
-    this.setState({
-      actual_page: this.state.actual_page + 1
-    })
+      this.setState({
+        actual_page: this.state.actual_page + 1
+      })
     this.componentDidMount();
   }
 
@@ -51,29 +51,31 @@ export default class MovieList extends Component {
     return (
       this.state.loading ?
         <p>Loading..</p> :
-
-       
-          <div>
+        <div>
           <p className="pagesCount">There are {this.state.pages} pages</p>
-          <div className="movieList">
-          <div className="lista">
-            {movies.map(movie =>
-              <div className="films">
-
-                <a href={movielink + "?movie=" + movie.id} ><img className="images link1" src={imglink + movie.poster_path} alt={`Film image ${movie.id}`} height="330" width="auto" /> </a>
-                <div className="textbox">
-                  <a className="link2 links" key={movie.id} href={movielink + "?movie=" + movie.id}>  {movie.original_title} </a>
-                  <p className="date">{movie.release_date}</p>
-                </div>
-              </div>
-            )}
+          <div className="buttons">
+            <button onClick={this.prevPage} className="buton_p">Anterior</button>
+            Page {this.state.actual_page}
+            <button onClick={this.nextPage} className="buton_p">Siguiente</button>
           </div>
+          <div className="movieList">
+            <div className="lista">
+              {movies.map(movie =>
+                <div className="films">
+                  <a href={movielink + "?movie=" + movie.id} ><img className="images link1" src={imglink + movie.poster_path} alt={`Film image ${movie.id}`} height="330" width="auto" /> </a>
+                  <div className="textbox">
+                    <a className="link2 links" key={movie.id} href={movielink + "?movie=" + movie.id}>  {movie.original_title} </a>
+                    <p className="date">{movie.release_date}</p>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="buttons">
-            <button onClick={this.prevPage}>Anterior</button>
+            <button onClick={this.prevPage} className="buton_p">Anterior</button>
             Page {this.state.actual_page}
-            <button onClick={this.nextPage}>Siguiente</button>
+            <button onClick={this.nextPage} className="buton_p">Siguiente</button>
           </div>
         </div>
 

@@ -34,16 +34,16 @@ export default class MovieInfo extends Component {
 
         return (
             <div className="container">
-                <img src={imglink} alt="Smiley face" height="500" width="auto"></img>
-                <h2>{film.original_title}</h2>
-                <h3>{film.tagline}</h3>
-                <p>Original language: {film.original_language}</p>
-                <p>Release date: {film.release_date}</p>
-                <div>
-
+                <div className="image_detail">
+                    <img src={imglink} className="src_image_detail" alt="Smiley face" height="500" width="auto" />
                 </div>
-                <p>{film.overview}</p>
-
+                <div className="info_detail">
+                    <h2>{film.original_title}</h2>
+                    <h3>{film.tagline}</h3>
+                    <p>Original language: {film.original_language}</p>
+                    <p>Release date: {film.release_date}</p>
+                    <p>{film.overview}</p>
+                </div>
             </div>
         )
     }

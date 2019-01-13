@@ -9,7 +9,7 @@ export default class Header extends Component {
           <Link to="/" className="logo">MovieCenter</Link>
         </span>
         <form action="/mlist">
-          <input type="text" name="text" placeholder="Search your film" />
+          <input type="text" className="input_text" name="text" placeholder="Search your film" />
           <input type="submit" className="myButton" value="Buscar"/>
         </form>
 

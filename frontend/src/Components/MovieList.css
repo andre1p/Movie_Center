@@ -104,3 +104,17 @@ font-size: 12px;
     font-weight: 700; 
     font-size: 17px; 
 }
+.buton_p{
+    color: black;
+    margin: 1em;
+    border-radius: 5px;
+    border:1px solid black;
+    padding: .5em 1em .5em 1em;
+    background-color: #7892c2;
+    cursor: pointer;
+    font-weight: 600;
+}
+.buton_p:hover{
+    background-color:#8268EF;
+    color:#ffffff;
+}

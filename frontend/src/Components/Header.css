@@ -21,7 +21,11 @@
     padding: auto;
     padding-right: 25px;
   }
- 
+  .input_text{
+    padding: 5px;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid rgb(33, 43, 63);
+  }
   .myButton {
     font-family: 'Francois One', sans-serif;
     font-weight: 700; 
@@ -33,8 +37,8 @@
     font-size:14px;
     text-decoration:none;
     border: 0;
-    padding: 2px;
-    
+    padding: 5px;
+    border-radius: 0px 5px 5px 0px;   
   }
   .myButton:hover {
     background-color:#8268EF;

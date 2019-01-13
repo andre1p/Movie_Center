@@ -1,4 +1,17 @@
 .container{
-    margin-top: 75px;
+    margin: 5% 0% 5% 10%;
+    padding: 2em;
     width: 80%;
+    display: flex;
+    background-color: rgba(131, 104, 239, 0.027);
+    border-radius: 20px;
+}
+.image_detail{
+    padding: 2em;
+}
+.info_detail{
+    padding: 5em;
+}
+.src_image_detail{
+   border-radius: 20px;
 }
