@@ -14,25 +14,8 @@ export default class Home extends Component {
       .then(json => {
         this.setState({
           movies: json.results,
-          pages: json.total_pages,
         });
       });
-  }
-
-  prevPage = () => {
-    if (this.state.actual_page > 1) {
-      this.setState({
-        actual_page: this.state.actual_page - 1
-      })
-      this.componentDidMount();
-    }
-  }
-  nextPage = () => {
-    if (this.state.actual_page < this.state.pages)
-      this.setState({
-        actual_page: this.state.actual_page + 1
-      })
-    this.componentDidMount();
   }
 
   render() {
