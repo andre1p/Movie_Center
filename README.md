@@ -1,3 +1,3 @@
 # Movie_Center
-Sergi viladasau
-çaoçaoçao
+Sergi Viladasau,
+Andreu Pellisa
