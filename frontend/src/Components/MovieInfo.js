@@ -12,6 +12,10 @@ export default class MovieInfo extends Component {
         }
     }
 
+    getMovie() {
+
+    }
+
     render() {
 
         const queryString = require('query-string');

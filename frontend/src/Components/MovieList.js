@@ -8,7 +8,6 @@ export default class MovieList extends Component {
     this.state = {
       movies: [],
       pages: null,
-      loading: true,
       actual_page: 1,
     }
   }
@@ -22,27 +21,20 @@ export default class MovieList extends Component {
         this.setState({
           movies: json.results,
           pages: json.total_pages,
-          loading: false,
         });
       });
   }
-  changePage = (x) => {
-    this.setState({
-      actual_page: x
-    })
-    this.componentDidMount();
-  }
+
   prevPage = () => {
     if (this.state.actual_page > 1) {
       this.setState({
         actual_page: this.state.actual_page - 1
       })
       this.componentDidMount();
-    } else {
-      console.log("FUCK YOU");
     }
   }
   nextPage = () => {
+    if (this.state.actual_page < this.state.pages)
     this.setState({
       actual_page: this.state.actual_page + 1
     })
@@ -50,38 +42,41 @@ export default class MovieList extends Component {
   }
 
   render() {
-
+    this.componentDidMount();
     let { movies } = this.state;
     let imglink = ["https://image.tmdb.org/t/p/original"];
-    let movielink = ["http://localhost:3001/minfo"];
+    let movielink = ["http://localhost:3000/minfo"];
 
-    this.componentDidMount();
+
     return (
       this.state.loading ?
         <p>Loading..</p> :
-        
-        <div className="movieList">
-          <p>MovieList</p>
-          <p>There are {this.state.pages} pages</p>
 
-          <div class="lista">
+       
+          <div>
+          <p className="pagesCount">There are {this.state.pages} pages</p>
+          <div className="movieList">
+          <div className="lista">
             {movies.map(movie =>
               <div className="films">
-                
-                <img className="images" src={imglink + movie.poster_path} alt="Film Image" height="auto" width="100" />
-               <p> <a key={movie.id} className="links"  href={movielink + "?movie=" + movie.id}>{movie.original_title}</a> </p>
-                
+
+                <a href={movielink + "?movie=" + movie.id} ><img className="images link1" src={imglink + movie.poster_path} alt={`Film image ${movie.id}`} height="330" width="auto" /> </a>
+                <div className="textbox">
+                  <a className="link2 links" key={movie.id} href={movielink + "?movie=" + movie.id}>  {movie.original_title} </a>
+                  <p className="date">{movie.release_date}</p>
+                </div>
               </div>
             )}
           </div>
+          </div>
 
-          <div>
+          <div className="buttons">
             <button onClick={this.prevPage}>Anterior</button>
             Page {this.state.actual_page}
             <button onClick={this.nextPage}>Siguiente</button>
           </div>
         </div>
-        
+
     )
   }
 }

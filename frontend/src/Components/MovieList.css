@@ -7,14 +7,20 @@
 }
 
 .movieList{
-   text-align: center;
+   
     margin: auto;
-    max-width: 70%;
+    max-width:75%;
     margin-bottom: 75px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Francois One', sans-serif;
+    font-weight: 700; 
+    font-size: 17px;
 }
 
 .lista{
-
+    margin-left:1%;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -23,11 +29,17 @@
 }
 
 .films{
-    width: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 400px;
     margin-bottom: 20px;
 }
 
 .links{
+    text-align: center;
 color: white;
 text-decoration: none;
 font-family: 'Francois One', sans-serif;
@@ -36,6 +48,59 @@ font-size: 14px;
 
 }
 
+.link1:hover {
+-webkit-filter: saturate(50%); 
+filter: saturate(50%);
+-webkit-filter: grayscale(0%); 
+filter: grayscale(0%);
+-webkit-filter: drop-shadow(8px 8px 10px rgb(17, 17, 17));filter: drop-shadow(8px 8px 10px rgb(17, 17, 17));
+
+height:333px;
+}
+
 p{
     margin-top:5px;
+}
+
+.images{
+    -webkit-filter: grayscale(65%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(65%);
+    border-radius: 8px;
+}
+
+.textbox{
+    width: 200px;
+    word-wrap: break-word;
+}
+
+.date{
+color: #8268EF;
+text-decoration: none;
+font-family: 'Francois One', sans-serif;
+font-weight: 500; 
+font-size: 12px;
+}
+
+.pagesCount{
+    text-align: center;
+    margin: auto;
+    max-width:75%;
+    margin-bottom: 75px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Francois One', sans-serif;
+    font-weight: 700; 
+    font-size: 17px; 
+}
+
+.buttons{
+    text-align: center;
+    margin: auto;
+    max-width:75%;
+    margin-bottom: 75px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Francois One', sans-serif;
+    font-weight: 700; 
+    font-size: 17px; 
 }
