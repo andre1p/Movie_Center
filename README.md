@@ -1,3 +1,3 @@
 # Movie_Center
-Sergi Viladasau
+Sergi Viladasau,
 Andreu Pellisa
